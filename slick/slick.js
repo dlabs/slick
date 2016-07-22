@@ -1938,14 +1938,14 @@
 
 
         if (_.options.vertical === false && _.options.variableWidth === false) {
-            _.slideWidth = Math.ceil(_.listWidth / _.options.slidesToShow);
-            _.$slideTrack.width(Math.ceil((_.slideWidth * _.$slideTrack.children('.slick-slide').length)));
+            _.slideWidth = Math.floor(_.listWidth / _.options.slidesToShow);
+            _.$slideTrack.width(Math.floor((_.slideWidth * _.$slideTrack.children('.slick-slide').length)));
 
         } else if (_.options.variableWidth === true) {
             _.$slideTrack.width(5000 * _.slideCount);
         } else {
-            _.slideWidth = Math.ceil(_.listWidth);
-            _.$slideTrack.height(Math.ceil((_.$slides.first().outerHeight(true) * _.$slideTrack.children('.slick-slide').length)));
+            _.slideWidth = Math.floor(_.listWidth);
+            _.$slideTrack.height(Math.floor((_.$slides.first().outerHeight(true) * _.$slideTrack.children('.slick-slide').length)));
         }
 
         var offset = _.$slides.first().outerWidth(true) - _.$slides.first().width();

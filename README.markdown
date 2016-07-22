@@ -5,6 +5,8 @@ slick
 
 _the last carousel you'll ever need_
 
+### *Note*: this fork changes `Slick.prototype.setDimensions` use of `ceil` (round up) to `floor` (round down). This could cause some issues, see [slick#2167](https://github.com/kenwheeler/slick/issues/2167).
+
 #### Demo
 
 [http://kenwheeler.github.io/slick](http://kenwheeler.github.io/slick/)
